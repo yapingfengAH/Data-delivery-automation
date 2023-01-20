@@ -20,9 +20,9 @@ Arguments: <br>
 -m  Mismatch:  0 = no mismatch;  1 = one mismatch <br>
 -k  Index type:  1 = single index;  2 = dual indexes <br>
 
-Note: The name of log.out file should to the same as project folder name.  For example, if the project folder name is 22167-01, then the log.out file will be 22167-01.log.out. <br>
+Note: The name of log.out file should to the same as project folder name.  For example, if the project folder name is 22167-01, then the log.out file will be 22167-01.log.out.
 
-FastQ files will be generated in the “fastq” folder under the project folder. <br>
+FastQ files will be generated in the “fastq” folder under the project folder.
 
 Other files that will also be generated under the project folder: <br>
 mm1.txt – Variation of Index 1 <br>
