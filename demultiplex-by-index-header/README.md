@@ -33,9 +33,9 @@ runtime.txt – Total run time of the script. <br>
 Demultiplex-by-Index-Header script splits undetermined reads by their index header, and provides an alternative way of performing demultiplex locally instead of re-demultiplexing samples from run using the more computational-demanding bcl2fastq program.  Variable barcode length, mismatch, and type can be assessed using this script. <br>
 
 **Advantage** <br>
-• Consume less resources using built-in Bash command zcat and grep. <br>
-• Allow less time to complete by parallel processing. * <br>
+• Consume less resources using built-in Bash command zcat and grep.
+• Allow less time to complete by parallel processing. *
 
 **Limitation** <br>
-• Less customization in order to reduce computational complexity. <br> 
-• Data with huge size may still take longer time to process when compared to using BaseSpace demultiplex application online. * <br>
+• Less customization in order to reduce computational complexity.
+• Data with huge size may still take longer time to process when compared to using demultiplex application on BaseSpace.
