@@ -1,8 +1,7 @@
 # demultiplex-by-index-header
 
 Command-line:
-
-
+nohup ./main.sh -w /folderpath -h dmx -p <parallel runs> -j <projectID> -a Undetermined-R1.fastq.gz -b Undetermined-R2.fastq.gz -s SampleSheet.csv -l <barcode length> -m <mismatch> -k <index type> > /folderpath/<ProjectID>.log.out 2>&1 & <br>
 
 Example:
 
@@ -11,7 +10,7 @@ Example:
 Arguments: <br>
 -w  Working directory path <br>
 -h  Script ID for matching job ID (please use “dmx” as default) <br>
--p  Max number of parallel runs (10 as default, may use more) <br>
+-p  Max number of parallel runs (use 10 as default, may use more) <br>
 -j Project folder name (same name as log.out file) <br>
 -a  Undetermined reads R1: fastq.gz file <br>
 -b  Undetermined reads R2: fastq.gz file <br>
