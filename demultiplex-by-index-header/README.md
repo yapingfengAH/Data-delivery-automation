@@ -1,10 +1,10 @@
 # demultiplex-by-index-header
 
-Command-line:
+Command-line: <br>
 nohup ./main.sh -w /folderpath -h dmx -p &lt;parallel runs&gt; -j &lt;projectID&gt; -a Undetermined-R1.fastq.gz -b Undetermined-R2.fastq.gz -s SampleSheet.csv -l &lt;barcode length&gt; -m &lt;mismatch&gt; -k &lt;index type&gt; > /folderpath/&lt;ProjectID&gt;.log.out 2>&1 & <br>
 
-Example:
-
+Example: <br>
+nohup ./main.sh -w /fast-data/BI/RUO_wchen/test/demultiplex-v1.1 -h dmx -p 20 -j 22167-01 -a /fast-data/BI/RUO_wchen/FastQ/undetermined-reads/Undetermined-121922-x-fc1_S0_L004_R1_001.fastq.gz -b /fast-data/BI/RUO_wchen/FastQ/undetermined-reads/Undetermined-121922-x-fc1_S0_L004_R2_001.fastq.gz -s /fast-data/BI/RUO_wchen/samplesheet/SampleSheet-121922-x-fc1-L04-test2.csv -l 6 -m 1 -k 2 > /fast-data/BI/RUO_wchen/test/demultiplex-v1.1/22167-01.log.out 2>&1 & <br>
 
 
 Arguments: <br>
