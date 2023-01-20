@@ -1,7 +1,7 @@
 # demultiplex-by-index-header
 
 Command-line:
-nohup ./main.sh -w /folderpath -h dmx -p &lt;parallel runs&gt; -j <projectID> -a Undetermined-R1.fastq.gz -b Undetermined-R2.fastq.gz -s SampleSheet.csv -l <barcode length> -m <mismatch> -k <index type> > /folderpath/<ProjectID>.log.out 2>&1 & <br>
+nohup ./main.sh -w /folderpath -h dmx -p &lt;parallel runs&gt; -j &lt;projectID&gt; -a Undetermined-R1.fastq.gz -b Undetermined-R2.fastq.gz -s SampleSheet.csv -l &lt;barcode length&gt; -m &lt;mismatch&gt; -k &lt;index type&gt; > /folderpath/&lt;ProjectID&gt;.log.out 2>&1 & <br>
 
 Example:
 
