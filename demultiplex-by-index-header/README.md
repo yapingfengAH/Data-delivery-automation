@@ -37,5 +37,5 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 • Allow less time to complete by parallel processing. * <br>
 
 **Limitation** <br>
-• Less customization in order to reduce computational complexity. <br>
-• Data with huge size may still take longer time to process when compared to using BaseSpace demultiplex application online. <br>
+• Less customization in order to reduce computational complexity. <br> 
+• Data with huge size may still take longer time to process when compared to using BaseSpace demultiplex application online. * <br>
