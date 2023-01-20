@@ -8,8 +8,8 @@ Example:
 
 
 
-Arguments:
--w  Working directory path
+Arguments: <br>
+-w  Working directory path <br>
 -h  Script ID for matching job ID (please use “dmx” as default)
 -p  Max number of parallel runs (10 as default, may use more)
 -j Project folder name (same name as log.out file)
