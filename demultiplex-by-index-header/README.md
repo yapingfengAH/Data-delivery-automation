@@ -70,6 +70,10 @@ This samplesheet shows single index with length of 6.  Note that column Index2 s
 • dmx10-R1.sh <br>
 • dmx10-R1.sh <br>
 
+**Programming Language** <br>
+• Bash <br>
+• Python <br>
+
 ## Additional Note
 To count reads: echo $(zcat file.fastq.gz|wc -l)/4|bc <br>
 To check current jobs: ps <br>
