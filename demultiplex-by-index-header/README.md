@@ -41,4 +41,27 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 • Data with huge size may still take longer time to process when compared to using demultiplex application on BaseSpace. * <br>
 
 ## Requirement
-Test.
+**Input Files** <br>
+• Undetermined reads R1: fastq.gz file (compressed) <br>
+• Undetermined reads R2: fastq.gz file (compressed) <br>
+• Samplesheet: csv file <br>
+
+**Required scripts (placed in same folder)** <br>
+• Main.sh – Master script <br>
+• convert2txt.py <br>
+• dmx0-R1.sh <br>
+• dmx0-R2.sh <br>
+• dmx6-R1.sh <br>
+• dmx6-R1.sh <br>
+• dmx8-R1.sh <br>
+• dmx8-R1.sh <br>
+• dmx10-R1.sh <br>
+• dmx10-R1.sh <br>
+
+
+
+
+
+
+
+
