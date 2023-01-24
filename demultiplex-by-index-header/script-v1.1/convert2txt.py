@@ -80,33 +80,3 @@ with open('samplelist.txt', 'w') as s:
 		s.write(str(a[i]) + '\n')
 s.close()
 
-
-'''
-###################################################################### divide barcodes into groups
-number=int(sys.argv[2])
-
-lst = open('listgroup.txt', 'w')
-
-num=[]
-for i in range(number, 20000, number):
-	num.append(i)
-
-for i in range(len(num)):
-	if len(a) >= num[i]:
-		if not len(a) <= num[i] and num[i]-len(a) < number:
-			lst.write(f'group{i}' + '\n')
-		with open(f'group{i}.txt', 'w') as s:
-
-			for j in range(number*i, len(a)):
-				if j < number*(i+1):
-					s.write(str(a[j]) + '\n')
-		s.close()
-	if len(a) <= num[i] and num[i]-len(a) < number:
-		lst.write(f'group{i}' + '\n')
-		with open(f'group{i}.txt', 'w') as s:
-			for j in range(number*i, len(a)):
-                                if j < number*(i+1):
-                                        s.write(str(a[j]) + '\n')
-		s.close()
-lst.close()
-'''
