@@ -44,10 +44,19 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 **Input Files** <br>
 • Undetermined reads R1: fastq.gz file (compressed) <br>
 • Undetermined reads R2: fastq.gz file (compressed) <br>
-• Samplesheet: csv file <br>
+• Samplesheet (see examples below): csv file <br>
+
+Creat a samplesheet from the template.  Note that columns Samples ID, Index (i7), and Index2 (i5) are needed for the script.  This samplesheet shows dual indexes with nucleotide length of 8 each.
 
 ![image](https://github.com/yapingfengAH/Data-delivery-automation/blob/master/demultiplex-by-index-header/images/index_duel_8_nt.jpg)
 
+This samplesheet shows dual indexes with length of 6.
+
+![image](https://github.com/yapingfengAH/Data-delivery-automation/blob/master/demultiplex-by-index-header/images/index_duel_6_nt.jpg)
+
+This samplesheet shows single index with length of 6.  Note that column Index2 should be filled with a place-holder index, and wil not affect the results.
+
+![image](https://github.com/yapingfengAH/Data-delivery-automation/blob/master/demultiplex-by-index-header/images/index_single_6_nt.jpg)
 
 **Required Scripts (placed in same folder)** <br>
 • Main.sh – Master script <br>
