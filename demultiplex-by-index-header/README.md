@@ -46,6 +46,9 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 • Undetermined reads R2: fastq.gz file (compressed) <br>
 • Samplesheet: csv file <br>
 
+![image](https://github.com/yapingfengAH/Data-delivery-automation/blob/master/demultiplex-by-index-header/images/index_duel_8_nt.jpg)
+
+
 **Required Scripts (placed in same folder)** <br>
 • Main.sh – Master script <br>
 • convert2txt.py <br>
