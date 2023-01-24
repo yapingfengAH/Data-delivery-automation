@@ -46,7 +46,7 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 • Undetermined reads R2: fastq.gz file (compressed) <br>
 • Samplesheet: csv file <br>
 
-**Required scripts (placed in same folder)** <br>
+**Required Scripts (placed in same folder)** <br>
 • Main.sh – Master script <br>
 • convert2txt.py <br>
 • dmx0-R1.sh <br>
@@ -58,10 +58,10 @@ Demultiplex-by-Index-Header script splits undetermined reads by their index head
 • dmx10-R1.sh <br>
 • dmx10-R1.sh <br>
 
-
-
-
-
-
-
+## Additional Note
+To count reads: echo $(zcat file.fastq.gz|wc -l)/4|bc <br>
+To check current jobs: ps <br>
+To cancel individual job: kill <job-ID> <br>
+To cancel all jobs in user account: pkill -u <user-ID> <br>
+Cancel all jobs only when no other important jobs are running. <br>
 
