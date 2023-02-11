@@ -19,6 +19,8 @@ nohup ./main.sh -w /folderpath -h dmx -p &lt;parallel runs&gt; -j &lt;projectID&
 nohup ./main.sh -w /fast-data/BI/RUO_wchen/test/demultiplex-v1.1 -h dmx -p 20 -j 22167-01 -a /fast-data/BI/RUO_wchen/FastQ/undetermined-reads/Undetermined-121922-x-fc1_S0_L004_R1_001.fastq.gz -b /fast-data/BI/RUO_wchen/FastQ/undetermined-reads/Undetermined-121922-x-fc1_S0_L004_R2_001.fastq.gz -s /fast-data/BI/RUO_wchen/samplesheet/SampleSheet-121922-x-fc1-L04-test2.csv -l 6 -m 1 -k 2 > /fast-data/BI/RUO_wchen/test/demultiplex-v1.1/22167-01.log.out 2>&1 &
 
 **Note** <br>
+For email notification, please change the default email address to your own email address in the main.sh script (line 10). <br>
+
 The name of log.out file should to the same as project folder name.  For example, if the project folder name is 22167-01, then the log.out file will be 22167-01.log.out.
 
 FastQ files will be generated in the “fastq” folder under the project folder.
