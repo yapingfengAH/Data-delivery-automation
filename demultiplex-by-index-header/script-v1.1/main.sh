@@ -7,7 +7,7 @@
 ################################################################################## calculate time
 start=$(date +%s%N)
 
-email="weichun.chen@admerahealth.com"
+email="yourname@admerahealth.com"
 
 ################################################################################## parse arguments
 while getopts w:h:p:j:a:b:s:l:m:k: flag
