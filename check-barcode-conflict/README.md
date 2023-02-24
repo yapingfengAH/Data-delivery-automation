@@ -1,7 +1,7 @@
 # Check for Barcode Conflict v1.0 (Linux version)
 
 ## Command-line
-python3 check-barcode.py <samplesheet.csv> <br>
+nohup python3 check-barcode.py <samplesheet.csv> > test.log.out 2>&1 & <br>
 
 **Output File** <br>
 mismatch0.txt: contains a list of samples with conflicting barcodes with exact match <br>
