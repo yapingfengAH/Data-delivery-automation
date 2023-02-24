@@ -3,8 +3,14 @@ import sys
 
 #### version 1.0
 ################################################################################################################ script for checking barcode conflict
+###################################################################### open file
+mismatch0=csv.writer(open("mismatch0.csv",'w'))
+mismatch1=csv.writer(open("mismatch1.csv",'w'))
+
 ###################################################################### function
 def exact_match(samplename, barcode, index1, index2, single_barcode):
+	a=[]
+	b=[]
 	if 'GGGGGG' in index2 or 'GGGGGGGG' in index2 or 'GGGGGGGGGG' in index2: #### if there is single index...
 
 		######################################################################
@@ -67,20 +73,26 @@ def exact_match(samplename, barcode, index1, index2, single_barcode):
 
 			for i in range(len(sp3)): #### print a list of samples
 				print(sp3[i])
+				a.append(sp3[i])
 
 			print("Barcode conflict information:")
 
 			for key, value in dict_combine.items():
 				if len(value) > 1:
 					s1.append(value)
-					print("Samples:", value, "; Barcode: ", key)  #### print barcode conflict information
+					print("Samples:", value, "; Barcode: ", key) #### print barcode conflict information
 
 			for key, value in dict_index1.items():
 				if key in single_barcode:
 					if len(value) > 1:
 						print("Samples:", value, "; Barcode: ", key) #### print barcode conflict information
+
 		else:
 			print("There is no barcode conflict!")
+		print()
+
+		a.sort()
+		return a
 
 		######################################################################
 	else:	#### if there is no single index...
@@ -118,6 +130,7 @@ def exact_match(samplename, barcode, index1, index2, single_barcode):
 
 			for i in range(len(sp)): #### print a list of samples
 				print(sp[i])
+				b.append(sp[i])
 
 		counter=0
 		for key, value in dict_combine.items():
@@ -129,10 +142,14 @@ def exact_match(samplename, barcode, index1, index2, single_barcode):
 
 		if counter == 0:
 			print("There is no barcode conflict!")
+		print()
 
-	print()
+		b.sort()
+		return b
 
 def mismatch_eq_1(samplename, barcode, index2, mm1, mm2, single_samplename, mms):
+	c=[]
+	d=[]
 	if 'GGGGGG' in index2 or 'GGGGGGGG' in index2 or 'GGGGGGGGGG' in index2: #### if there is single index...
 		print("Single indexing is used among samples:")
 		#print("Single indexing is used among samples (it is advised to separate single index from duel indexes in the samplesheet or re-demultiplex single indexing samples even if it does not contribute to barcode conflict):")
@@ -201,6 +218,8 @@ def mismatch_eq_1(samplename, barcode, index2, mm1, mm2, single_samplename, mms)
 
 			for i in range(len(sp3)): #### print a list of samples
 				print(sp3[i])
+				c.append(sp3[i])
+
 
 		if len(mismatch1_single) != 0:
 			print("Barcode conflict information (for samples that are exactly the same, only shows only the first pattern that violates):")
@@ -218,6 +237,9 @@ def mismatch_eq_1(samplename, barcode, index2, mm1, mm2, single_samplename, mms)
 		else:
 			print("There is no barcode conflict!")
 		print()
+
+		c.sort()
+		return c
 
 		######################################################################
 	else:
@@ -255,6 +277,7 @@ def mismatch_eq_1(samplename, barcode, index2, mm1, mm2, single_samplename, mms)
 
 			for i in range(len(sp)): #### print a list of samples
 				print(sp[i])
+				d.append(sp[i])
 
 		if len(mismatch1) != 0:
 			print("Barcode conflict information (for samples that are exactly the same, only shows only the first pattern that violates):")
@@ -264,6 +287,8 @@ def mismatch_eq_1(samplename, barcode, index2, mm1, mm2, single_samplename, mms)
 			print("There is no barcode conflict!")
 		print()
 
+		d.sort()
+		return d
 
 ###################################################################### main
 ###################################################################### extract information from samplesheet
@@ -357,11 +382,16 @@ for i in range(len(mm1)):
 ###################################################################### check for barcode conflict
 print("----------------------------------------------------------------------------------")
 print("Exact match: checking for barcode conflict...")
-exact_match(sample, combine, index1, index2, single_barcode)
+m0=exact_match(sample, combine, index1, index2, single_barcode)
+#print(m0)
+for item in m0:
+	mismatch0.writerow([item])
 
 print("-----------------------------------------------------------------------------------")
 print("Mismatch = 1: checking for barcode conflict...")
-mismatch_eq_1(sample, combine2, index2, mm1, mm2, single_sample, mms)
-
+m1=mismatch_eq_1(sample, combine2, index2, mm1, mm2, single_sample, mms)
+#print(m1)
+for item in m1:
+	mismatch1.writerow([item])
 
 
