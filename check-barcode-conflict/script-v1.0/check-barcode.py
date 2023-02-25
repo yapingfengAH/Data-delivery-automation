@@ -7,7 +7,6 @@ import sys
 #  Date       : 2/24/2023
 #  Description: Check for barcode conflict
 
-
 #### version 1.0
 ################################################################################################################ script for checking barcode conflict
 ###################################################################### open file
