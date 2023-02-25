@@ -1,4 +1,5 @@
 # demultiplex-by-index-header v1.1
+Author: Wei Chun (John) Chen
 
 ## **Command-line** <br>
 nohup ./main.sh -w /folderpath -h dmx -p &lt;parallel runs&gt; -j &lt;projectID&gt; -a Undetermined-R1.fastq.gz -b Undetermined-R2.fastq.gz -s SampleSheet.csv -l &lt;barcode length&gt; -m &lt;mismatch&gt; -k &lt;index type&gt; > /folderpath/&lt;ProjectID&gt;.log.out 2>&1 & <br>

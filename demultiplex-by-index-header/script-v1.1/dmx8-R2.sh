@@ -1,5 +1,11 @@
 #!/bin/bash
 
+################################################################################################################
+#  Author     : Wei Chun (John) Chen
+#  E-mail     : weichun.chen@admerahealth.com
+#  Date       : 2/13/2023
+#  Description: Split undetermined reads by index header
+
 #### version 1.1
 #################################################################################
 R2=$1
