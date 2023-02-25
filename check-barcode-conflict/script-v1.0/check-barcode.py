@@ -1,6 +1,13 @@
 import csv
 import sys
 
+################################################################################################################
+#  Author     : Wei Chun (John) Chen
+#  E-mail     : weichun.chen@admerahealth.com
+#  Date       : 2/24/2023
+#  Description: Check for barcode conflict
+
+
 #### version 1.0
 ################################################################################################################ script for checking barcode conflict
 ###################################################################### open file
