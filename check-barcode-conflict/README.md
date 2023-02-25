@@ -1,4 +1,5 @@
 # Check for Barcode Conflict v1.0 (Linux version)
+Author: Wei Chun (John) Chen <br>
 
 ## Command-line
 nohup python3 check-barcode.py <samplesheet.csv> > filename.log.out 2>&1 & <br>
